@@ -1,0 +1,34 @@
+# Per-track config (this folder = one sound).
+# All music/*/config.yaml tracks are active; matching phrases play this file.
+file: baby_dont_cry.mp3
+cooldown_seconds: 5
+
+phrases:
+  - baby dont cry
+  - baby don't cry
+  - maybe dont cry
+  - maybe don't cry
+  - babe dont cry
+  - baby done cry
+  - they didnt cry
+  - they don't cry
+  - be didnt cry
+
+model:
+  path: model
+  sample_rate: 16000
+  # Extra grammar entries (in addition to phrases + [unk])
+  grammar_extra:
+    - baby do not cry
+  # ASR substitutions applied before matching (src -> dst)
+  normalize:
+    did not: dont
+    do not: dont
+    didnt: dont
+    done: dont
+    babe: baby
+    maybe: baby
+  # Fuzzy match: each rule is a list of groups; every group must match (any option in group).
+  fuzzy:
+    - [[baby], [dont], [cry, crying]]
+    - [[they, be], [dont], [cry, crying]]

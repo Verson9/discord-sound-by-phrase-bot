@@ -1,0 +1,9 @@
+# Discord DAVE broke stock py-cord voice receive; use the fix branch until it ships on PyPI.
+py-cord[voice] @ git+https://github.com/Pycord-Development/pycord@fix/voice-rec-2
+davey
+vosk
+numpy
+python-dotenv
+pyyaml
+# Python 3.13+ only (stdlib audioop was removed):
+audioop-lts; python_version >= "3.13"

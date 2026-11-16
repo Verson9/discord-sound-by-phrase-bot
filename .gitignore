@@ -1,0 +1,27 @@
+# Secrets
+.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Vosk model (download separately — see README)
+model/
+
+# Large / local audio leftovers
+sound_raw.mp3
+*.wav
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
